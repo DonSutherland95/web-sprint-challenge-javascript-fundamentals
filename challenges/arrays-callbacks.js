@@ -70,15 +70,24 @@ const zooAnimals = [
 The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
+
+// zooAnimals.forEach(function (item) {
+//   displayNames.push(
+//     ` Name: ${item.animal_name} Scientific: ${item.scientific_name} `
+//   );
+// });
+
+// zooAnimals.forEach((item) =>
+//   displayNames.push(
+//     `Name: ${item.animal_name} Scientific: ${item.scientific_name} `
+//   )
+// );
 const displayNames = [];
-// zooAnimals.forEach(element => displayNames.push(element.animal_name))
-zooAnimals.forEach(function (item) {
-  // console.log(item.scientific_name);
+zooAnimals.forEach((item) => {
   displayNames.push(
-    ` name: ${item.animal_name} scientific: ${item.scientific_name} `
+    ` Name: ${item.animal_name} Scientific: ${item.scientific_name} `
   );
 });
-
 console.log(displayNames);
 
 /* Request 2: .map()
@@ -87,7 +96,15 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 
-const lowCaseAnimalNames = zooAnimals.map(function (item) {
+// const lowCaseAnimalNames = zooAnimals.map(function (item) {
+//   return item.animal_name.toLocaleLowerCase();
+// });
+
+// const lowCaseAnimalNames = zooAnimals.map((item) =>
+//   item.animal_name.toLocaleLowerCase()
+// );
+
+const lowCaseAnimalNames = zooAnimals.map((item) => {
   return item.animal_name.toLocaleLowerCase();
 });
 console.log(lowCaseAnimalNames);
@@ -97,7 +114,14 @@ console.log(lowCaseAnimalNames);
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals = zooAnimals.filter(function (item) {
+// const lowPopulationAnimals = zooAnimals.filter(function (item) {
+//   return item.population < 5;
+// });
+
+// const lowPopulationAnimals = zooAnimals.filter((item) => item.population < 5);
+// console.log(lowPopulationAnimals);
+
+const lowPopulationAnimals = zooAnimals.filter((item) => {
   return item.population < 5;
 });
 console.log(lowPopulationAnimals);
@@ -107,8 +131,14 @@ console.log(lowPopulationAnimals);
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
+// let populationTotal = 0;
+// populationTotal = zooAnimals.reduce(function (acc, item) {
+//   return acc + item.population;
+// }, 0);
+// console.log(populationTotal);
+
 let populationTotal = 0;
-populationTotal = zooAnimals.reduce(function (acc, item) {
+populationTotal = zooAnimals.reduce((acc, item) => {
   return acc + item.population;
 }, 0);
 console.log(populationTotal);
@@ -140,9 +170,9 @@ let greeting = function (fname, lname) {
   return `Hello ${fname} ${lname}, nice to meet you!`;
 };
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 /*
 

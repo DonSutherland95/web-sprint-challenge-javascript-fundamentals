@@ -16,7 +16,7 @@ function myFunction() {
 myFunction();
 
 // Explanation:
-// This is because child functions has access to all of its parent's function varaibles
+// This is because nested/child functions has access to all of its parent's function variables. It can access the outer variables.
 
 /* Task 2: Counter */
 
@@ -29,4 +29,4 @@ function summation(input) {
   }
   return count;
 }
-summation(4);
+console.log(summation(4));

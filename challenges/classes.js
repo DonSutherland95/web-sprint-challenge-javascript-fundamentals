@@ -1,5 +1,5 @@
 // 1. Copy and paste your prototype in here and refactor into class syntax.
-class Cuboid {
+class Cuboids {
   constructor(length, width, height) {
     this.length = length;
     this.width = width;
@@ -19,9 +19,9 @@ class Cuboid {
     return answer;
   }
 }
-const cuboid1 = new Cuboid(4, 5, 5);
-console.log(cuboid1.volume()); // 100
-console.log(cuboid1.surfaceArea()); // 130
+const cuboid2 = new Cuboids(4, 5, 5);
+console.log(cuboid2.volume()); // 100
+console.log(cuboid2.surfaceArea()); // 130
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
